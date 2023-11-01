@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SEO</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="caminho/para/estilos.css"> <!-- Substitua "caminho/para/estilos.css" pelo caminho correto para o seu arquivo estilos.css -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1 class="text-center" id="titulo">SEARCH ENGINE OPTIMIZATION</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div id="perguntas">
+                    <button class="btn btn-pink btn-block mb-2" data-index="0">O QUE É SEO?</button>
+                    <button class="btn btn-pink btn-block mb-2" data-index="1">Como funciona o rasteamento e a indexação?</button>
+                    <button class="btn btn-pink btn-block mb-2" data-index="2">Dê exemplos de otimização "on-page".</button>
+                    <button class="btn btn-pink btn-block mb-2" data-index="3">Quais práticas não são indicadas para indexadores como os do Google?</button>
+                    <button class="btn btn-pink btn-block mb-2" data-index="4">Faz sentido aplicar SEO em 2023?</button>
+                    <!-- Adicione mais perguntas aqui -->
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div id="respostas">
+                    <div class="col-12 resposta" data-index="0">
+                        <h3>SEARCH ENGINE OPTIMIZATION</h3>
+                        <p>Abreviada para SEO, é um conjunto de técnicas que serve para otimizar os motores de busca.</p>
+                    <p>Influenciam os algoritmos dos buscadores a definirem o ranking de uma para para determinada palavra chave que foi pesquisada.</p>
+                <p>Otimizar os mecanismos de busca é importante pois isso ajuda a alcançar bom posicionamento orgânico de páginas na web nos buscadores, entregando um conteúdo de qualidade e uma boa experiência para os usuários.</p>
+            </div>
+                    <div class="col-12 resposta" data-index="1">
+                        <h3>Rasteamento e a indexação</h3>
+                        <p>São processos necessários para que a informação fique organizada e acessível.</p>
+                    <p>Rastreamento: o google rastreia as bilhões de páginas online que existem, utilizando códigos conhecidos como rastreadores ou bots.</p>
+                    <p>Indexação: após a página ser rastreada o google identifica ela, e ai ocorre o processamento e analise do conteúdo. Nesse processo é avaliado se existe páginas duplicadas ou atributos alternativos. Após isos o google renderiza as páginas.</p>
+                    </div>
+                    <div class="col-12 resposta" data-index="2">
+                        <h3>OTIMIZAÇÃO ON-PAGE</h3>
+                        <p>Otimização on page são todas as otimizações feitas dentro da página.</p>
+                        <p>EXEMPLOS:</p>
+                        <p>-Titulo com palavra chave principal</p>
+                        <p>-Colocar descrição nas imagens do texto</p>
+                        <p>-Inserir links para outros conteúdos do próprio site</p>
+                        <p>-URL e subtitulos adequados</p>
+
+                    </div>
+                    <div class="col-12 resposta" data-index="3">
+                        <h3>Práticas não indicadas para indexadores</h3>
+                        <p>Black Hat SEO ou seja táticas usadas para ranquear um site que violam as diretrizes dos mecanismos de pesquisa.</p>
+                        <p>EXEMPLOS DE BLACK HAT:</p>
+                        <p>-Texto Oculto</p>
+                        <p>-Links pagos</p>
+                        <p>-Redircionamentos enganosos</p>
+                        <p>-Cloaking</p>
+                    </div>
+                    <div class="col-12 resposta" data-index="4">
+                        <h3>SEO ATUALMENTE: FAZ SENTIDO?</h3>
+                        <p>Sim, SEO é extremamente útil como uma estratégia de marketing digital para aumentar o tráfego para um site.</p>
+                    </div>
+                    <!-- Adicione mais respostas aqui -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#perguntas button").on("click", function () {
+                var index = $(this).data("index");
+                $("#respostas .resposta").hide();
+                $("#respostas .resposta[data-index='" + index + "']").show();
+            });
+        });
+    </script>
+    <style>
+    .btn-pink {
+        background-color: pink;
+        color: black;
+    }
+    .resposta {
+            display: none;
+        }
+
+#titulo {
+    color:pink;
+    margin-bottom: 50px; 
+}
+    </style>
+</body>
+</html>
